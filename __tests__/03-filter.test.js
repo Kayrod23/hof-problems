@@ -4,7 +4,7 @@ const {
   getTitleTracks,
 } = require("../index");
 
-describe("getSongsBySaib()", () => {
+describe.only("getSongsBySaib()", () => {
   let songs;
   beforeEach(() => {
     jest.resetModules();
