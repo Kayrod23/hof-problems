@@ -34,8 +34,8 @@ const exampleSongData = require("./data/songs");
     ];
  */
 function getAllMovieTitles(movies) {
-  let getAllMovieNames = movies.map (movie => movie.title)
-  return getAllMovieNames
+  let getAllMovieNames = movies.map (movie => movie.title);
+  return getAllMovieNames;
 }
 
 /**
@@ -44,8 +44,8 @@ function getAllMovieTitles(movies) {
  * @returns {string[]} An array of strings, all of which are song titles.
  */
 function getSongTitles(songs) {
-  let getAllSongNames = songs.map (song => song.title)
-  return getAllSongNames
+  let getAllSongNames = songs.map (song => song.title);
+  return getAllSongNames;
 }
 
 /**
@@ -58,8 +58,8 @@ function getSongTitles(songs) {
  *  //> [ "Berlin Tsukin by Taiyo Ky", "Up by Sebastian Kamae", ... ]
  */
 function getSongDetails(songs) {
-  let getAllSongDetails = songs.map (song => `${song.title} by ${song.artist}`)
-  return getAllSongDetails
+  let getAllSongDetails = songs.map (song => `${song.title} by ${song.artist}`);
+  return getAllSongDetails;
 }
 
 /**
@@ -73,11 +73,11 @@ function getSongDetails(songs) {
  */
 function getTitleAndArtist(songs) {
   let getTitleAndArtist = songs.map (song => {
-    let obj = {}
-    obj[song.title] =song.artist
-    return obj
-  })
-  return getTitleAndArtist
+    let obj = {};
+    obj[song.title] =song.artist;
+    return obj;
+  });
+  return getTitleAndArtist;
 }
 
 /**
@@ -89,21 +89,30 @@ function getTitleAndArtist(songs) {
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object} A single object.
  */
-function findPinkElephantsByTimestreet(songs) {}
+function findPinkElephantsByTimestreet(songs) {
+  let found = songs.find (song => song.title === "Pink Elephants");
+  return found;
+}
 
 /**
  * Returns the first song in the list that is under three minutes.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object} A single object.
  */
-function findFirstSongUnderThreeMinutes(songs) {}
+function findFirstSongUnderThreeMinutes(songs) {
+  let found = songs.find (song => song.runtimeInSeconds < 180);
+  return found;
+}
 
 /**
  * Returns the first song in the list where the song title equals the song album.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object} A single object.
  */
-function findFirstTitleTrack(songs) {}
+function findFirstTitleTrack(songs) {
+  let found = songs.find (song => song.title === song.album);
+  return found;
+}
 
 /**
  * findById()
@@ -119,7 +128,13 @@ function findFirstTitleTrack(songs) {}
       // Toy Story 4
     };
  */
-function findById(movies, id) {}
+function findById(movies, id) {
+  let found = movies.find(movie => movie.imdbID === id);
+  if (!movies.length || found === undefined) {
+    return null;
+  }
+  return found;
+}
 
 /**
  * FILTER PROBLEMS
@@ -130,21 +145,30 @@ function findById(movies, id) {}
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]} An array of objects.
  */
-function getSongsBySaib(songs) {}
+function getSongsBySaib(songs) {
+  let bySaib = songs.filter(song => song.artist === "Saib");
+  return bySaib;
+}
 
 /**
  * Returns an array of all songs where the runtime is over three minutes.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]} An array of objects.
  */
-function getSongsOverThreeMinutes(songs) {}
+function getSongsOverThreeMinutes(songs) {
+  let over3Min = songs.filter(song => song.runtimeInSeconds > 180);
+  return over3Min;
+}
 
 /**
  * Returns an array of songs where the song title is the same as the song album.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]} An array of objects.
  */
-function getTitleTracks(songs) {}
+function getTitleTracks(songs) {
+  let sameTitleAndAlbumName = songs.filter(song => song.title === song.album);
+  return sameTitleAndAlbumName;
+}
 /**
  * filterByGenre()
  * -----------------------------
@@ -165,7 +189,11 @@ function getTitleTracks(songs) {}
  *  filterByGenre(movies, "Horror")
  *  //> []
  */
-function filterByGenre(movies, genre) {}
+function filterByGenre(movies, genre) {
+  let filtered = movies.filter(movie => 
+    movie.genre.toLowerCase().split(", ").includes(genre.toLowerCase()));
+    return filtered;
+}
 // const answer = [];
 // for (let i = 0; i < movies.length; i++) {
 //   if (
@@ -199,7 +227,14 @@ function filterByGenre(movies, genre) {}
       }
     ];
  */
-function getAllMoviesReleasedAtOrBeforeYear(movies, year) {}
+function getAllMoviesReleasedAtOrBeforeYear(movies, year) {
+  let filtered = movies.filter(movie => {
+    let movieSplit = movie.released.split(" ")
+    if(parseInt(movieSplit[2]) <= year) {
+      return movie
+    }});
+  return filtered; 
+}
 
 /*
  * REDUCE PROBLEMS
@@ -216,7 +251,9 @@ function getAllMoviesReleasedAtOrBeforeYear(movies, year) {}
  *  getHighestMetascore(movies);
  *  //> 96
  */
-function getHighestMetascore(movies) {}
+function getHighestMetascore(movies) {
+  
+}
 
 /**
  * getAverageIMDBRating()
@@ -255,7 +292,7 @@ function countByRating(movies) {}
  *  getBiggestBoxOfficeMovie(movies);
  *  //> "Incredibles 2"
  */
-function convertBoxOfficeToNumber(movie) {}
+function convertBoxOfficeToNumber(movies) {}
 
 function getBiggestBoxOfficeMovie(movies) {}
 

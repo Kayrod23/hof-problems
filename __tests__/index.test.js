@@ -12,7 +12,7 @@ const {
 const movies = require("../data/movies");
 const alternative = require("./fixtures/alternative-movies");
 
-describe.only("getAllMovieTitles()", () => {
+describe("getAllMovieTitles()", () => {
   test("should return all of the movie titles in an array", () => {
     const actual = getAllMovieTitles(movies);
     const expected = [
@@ -41,7 +41,7 @@ describe.only("getAllMovieTitles()", () => {
   });
 });
 
-describe("getHighestMetascore()", () => {
+describe.only("getHighestMetascore()", () => {
   test("should return highest Metascore of all movies as a number", () => {
     const actual = getHighestMetascore(movies);
     const expected = 96;
@@ -95,7 +95,7 @@ describe("countByRating()", () => {
   });
 });
 
-describe("findById()", () => {
+describe.only("findById()", () => {
   test("should return the entire movie based on the IMDB ID", () => {
     const id = "tt0892769";
     const actual = findById(movies, id);
@@ -137,7 +137,7 @@ describe("findById()", () => {
   });
 });
 
-describe("filterByGenre()", () => {
+describe.only("filterByGenre()", () => {
   test("should return all movies that include the specified genre", () => {
     const genre = "Mystery";
     const actual = filterByGenre(movies, genre);

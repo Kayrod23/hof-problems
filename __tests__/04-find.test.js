@@ -4,7 +4,7 @@ const {
   findFirstTitleTrack,
 } = require("../index");
 
-describe.only("findPinkElephantsByTimestreet()", () => {
+describe("findPinkElephantsByTimestreet()", () => {
   let songs;
   beforeEach(() => {
     jest.resetModules();
