@@ -4,7 +4,7 @@ const {
   anySongIsByPeanut,
 } = require("../index");
 
-describe.only("allSongsAreOverTwoMinutes()", () => {
+describe("allSongsAreOverTwoMinutes()", () => {
   let songs;
   beforeEach(() => {
     jest.resetModules();
