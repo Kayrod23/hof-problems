@@ -1,208 +1,4 @@
-const movies = [
-  {
-    actors: "Amy Poehler, Phyllis Smith, Richard Kind, Bill Hader",
-    awards: "Won 1 Oscar. Another 99 wins & 116 nominations.",
-    boxOffice: "$356,921,711",
-    country: "USA",
-    releasedOnDVD: "03 Nov 2015",
-    director: "Pete Docter, Ronnie Del Carmen(co-director)",
-    genre: "Animation, Adventure, Comedy, Drama, Family, Fantasy",
-    language: "English, Portuguese",
-    metascore: "94",
-    plot: "After young Riley is uprooted from her Midwest life and moved to San Francisco, her emotions - Joy, Fear, Anger, Disgust and Sadness - conflict on how best to navigate a new city, house, and school.",
-    poster:
-      "https://m.media-amazon.com/images/M/MV5BOTgxMDQwMDk0OF5BMl5BanBnXkFtZTgwNjU5OTg2NDE@._V1_SX300.jpg",
-    production: "Pixar Animation Studios, Walt Disney Pictures",
-    rated: "PG",
-    ratings: [
-      {
-        source: "Internet Movie Database",
-        value: "8.1/10",
-      },
-      {
-        source: "Rotten Tomatoes",
-        value: "98%",
-      },
-      {
-        source: "Metacritic",
-        value: "94/100",
-      },
-    ],
-    released: "19 Jun 2015",
-    response: "True",
-    runtime: "95 min",
-    title: "Inside Out",
-    type: "movie",
-    website: "N/A",
-    writer:
-      "Pete Docter (original story by), Ronnie Del Carmen (original story by), Pete Docter (screenplay by), Meg LeFauve (screenplay by), Josh Cooley (screenplay by), Michael Arndt (additional story material by), Simon Rich (additional story material by), Bill Hader (additional dialogue by), Amy Poehler (additional dialogue by)",
-    imdbID: "tt2096673",
-    imdbRating: "8.1",
-    imdbVotes: "637,213",
-  },
-  {
-    actors: "Craig T. Nelson, Holly Hunter, Sarah Vowell",
-    awards: "Nominated for 1 Oscar. 12 wins & 78 nominations total",
-    boxOffice: "$608,581,744",
-    country: "United States",
-    releasedOnDVD: "23 Oct 2018",
-    director: "Brad Bird",
-    genre: "Animation, Action, Adventure",
-    language: "English",
-    metascore: "80",
-    plot: "The Incredibles family takes on a new mission which involves a change in family roles: Bob Parr (Mr. Incredible) must manage the house while his wife Helen (Elastigirl) goes out to save the world.",
-    poster:
-      "https://m.media-amazon.com/images/M/MV5BMTEzNzY0OTg0NTdeQTJeQWpwZ15BbWU4MDU3OTg3MjUz._V1_SX300.jpg",
-    production: "Pixar Animation Studios, Walt Disney Pictures",
-    rated: "PG",
-    ratings: [
-      {
-        source: "Internet Movie Database",
-        value: "7.6/10",
-      },
-      {
-        source: "Rotten Tomatoes",
-        value: "93%",
-      },
-      {
-        source: "Metacritic",
-        value: "80/100",
-      },
-    ],
-    released: "15 Jun 2018",
-    response: "True",
-    runtime: "118 min",
-    title: "Incredibles 2",
-    type: "movie",
-    website: "N/A",
-    writer: "Brad Bird",
-    imdbID: "tt3606756",
-    imdbRating: "7.6",
-    imdbVotes: "260,243",
-  },
-  {
-    actors: "Auli'i Cravalho, Dwayne Johnson, Rachel House",
-    awards: "Nominated for 2 Oscars. 20 wins & 90 nominations total",
-    boxOffice: "$248,757,044",
-    country: "United States",
-    releasedOnDVD: "21 Feb 2017",
-    director: "Ron Clements, John Musker, Don Hall",
-    genre: "Animation, Adventure, Comedy",
-    language: "English, French",
-    metascore: "81",
-    plot: "In Ancient Polynesia, when a terrible curse incurred by the Demigod Maui reaches Moana's island, she answers the Ocean's call to seek out the Demigod to set things right.",
-    poster:
-      "https://m.media-amazon.com/images/M/MV5BMjI4MzU5NTExNF5BMl5BanBnXkFtZTgwNzY1MTEwMDI@._V1_SX300.jpg",
-    production: "Walt Disney Animation Studios",
-    rated: "PG",
-    ratings: [
-      {
-        source: "Internet Movie Database",
-        value: "7.6/10",
-      },
-      {
-        source: "Rotten Tomatoes",
-        value: "95%",
-      },
-      {
-        source: "Metacritic",
-        value: "81/100",
-      },
-    ],
-    released: "23 Nov 2016",
-    response: "True",
-    runtime: "107 min",
-    title: "Moana",
-    type: "movie",
-    website: "N/A",
-    writer: "Jared Bush, Ron Clements, John Musker",
-    imdbID: "tt3521164",
-    imdbRating: "7.6",
-    imdbVotes: "287,134",
-  },
-  {
-    actors: "Jay Baruchel, Gerard Butler, Craig Ferguson, America Ferrera",
-    awards: "Nominated for 2 Oscars. Another 25 wins & 61 nominations.",
-    boxOffice: "$217,581,231",
-    country: "USA",
-    releasedOnDVD: "25 Nov 2015",
-    director: "Dean DeBlois, Chris Sanders",
-    genre: "Animation, Action, Adventure, Family, Fantasy",
-    language: "English",
-    metascore: "75",
-    plot: "A hapless young Viking who aspires to hunt dragons becomes the unlikely friend of a young dragon himself, and learns there may be more to the creatures than he assumed.",
-    poster:
-      "https://m.media-amazon.com/images/M/MV5BMjA5NDQyMjc2NF5BMl5BanBnXkFtZTcwMjg5ODcyMw@@._V1_SX300.jpg",
-    production: "DreamWorks Animation, Vertigo Entertainment",
-    rated: "PG",
-    ratings: [
-      {
-        source: "Internet Movie Database",
-        value: "8.1/10",
-      },
-      {
-        source: "Rotten Tomatoes",
-        value: "99%",
-      },
-      {
-        source: "Metacritic",
-        value: "75/100",
-      },
-    ],
-    released: "26 Mar 2010",
-    response: "True",
-    runtime: "98 min",
-    title: "How to Train Your Dragon",
-    type: "movie",
-    website: "N/A",
-    writer:
-      "William Davies (screenplay by), Dean DeBlois (screenplay by), Chris Sanders (screenplay by), Cressida Cowell (based on the book by), Marc Hyman (collaborating writer)",
-    imdbID: "tt0892769",
-    imdbRating: "8.1",
-    imdbVotes: "681,600",
-  },
-  {
-    actors: "Simon Callow, Richard Dreyfuss, Jane Leeves, Joanna Lumley",
-    awards: "Nominated for 1 Oscar. Another 4 wins & 12 nominations.",
-    boxOffice: "$28,946,127",
-    country: "UK, USA",
-    releasedOnDVD: "13 Dec 2015",
-    director: "Henry Selick",
-    genre: "Animation, Adventure, Family, Fantasy, Musical",
-    language: "English",
-    metascore: "78",
-    plot: "An orphan who lives with his two cruel aunts befriends anthropomorphic bugs who live inside a giant peach, and they embark on a journey to New York City.",
-    poster:
-      "https://m.media-amazon.com/images/M/MV5BMTNkNWIwNGUtNTJlOC00NDU3LTk0NWEtNjNjNDM4NzRiNThkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
-    production: "Walt Disney Pictures, Skellington Productions",
-    rated: "PG",
-    ratings: [
-      {
-        source: "Internet Movie Database",
-        value: "6.7/10",
-      },
-      {
-        source: "Rotten Tomatoes",
-        value: "91%",
-      },
-      {
-        source: "Metacritic",
-        value: "78/100",
-      },
-    ],
-    released: "12 Apr 1996",
-    response: "True",
-    runtime: "79 min",
-    title: "James and the Giant Peach",
-    type: "movie",
-    website: "N/A",
-    writer:
-      "Roald Dahl (based on the book by), Karey Kirkpatrick (screenplay), Jonathan Roberts (screenplay), Steve Bloom (screenplay)",
-    imdbID: "tt0116683",
-    imdbRating: "6.7",
-    imdbVotes: "61,668",
-  },
-];
+
 /*
   Do not change the line below. If you'd like to run code from this file, you may use the `exampleMovies` and `exampleSongData` variables below to gain access to arrays of movies or songs.
 
@@ -538,7 +334,6 @@ function getBiggestBoxOfficeMovie(movies) {
   return reduced
 }
 
-getBiggestBoxOfficeMovie(movies)
 /**
  * SOME/EVERY PROBLEMS
  */
@@ -548,21 +343,30 @@ getBiggestBoxOfficeMovie(movies)
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {boolean}
  */
-function allSongsAreOverTwoMinutes(songs) {}
+function allSongsAreOverTwoMinutes(songs) {
+  let every = songs.every(song => song.runtimeInSeconds > 120);
+  return every
+}
 
 /**
  * Returns `true` if any song is over four minutes. Otherwise, return `false`.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {boolean}
  */
-function anySongIsOverFourMinutes(songs) {}
+function anySongIsOverFourMinutes(songs) {
+  let some = songs.some(song => song.runtimeInSeconds > 240);
+  return some;
+}
 
 /**
  * Returns `true` if any song is by the artist "Peanut". Otherwise, return `false`.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {boolean}
  */
-function anySongIsByPeanut(songs) {}
+function anySongIsByPeanut(songs) {
+  let some = songs.some(song => song.artist === "Peanut");
+  return some;
+}
 
 // Do not change anything below this line.
 module.exports = {
